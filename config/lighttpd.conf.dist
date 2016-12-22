@@ -1,0 +1,6 @@
+url.rewrite-once += (
+     "^/turweb/rss" => "/turweb/rss.php",
+     "^/turweb/(css|files|img|js|downloads)/.*$" => "$0",
+     "^/turweb/(.*)\?(.*)$" => "/turweb/index.php?$2",
+     "^/turweb/(.*)$" => "/turweb/index.php"
+)
