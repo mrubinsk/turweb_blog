@@ -16,4 +16,3 @@ $__autoloader->addClassPathMapper($myMapper);
 /* Binders */
 $GLOBALS['injector']->addBinder('RubinskyWeb_View', new RubinskyWeb_Binder_View());
 $registry = $GLOBALS['injector']->getInstance('Horde_Registry');
-
