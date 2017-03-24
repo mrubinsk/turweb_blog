@@ -12,6 +12,7 @@ define('HORDE_BASE', '/horde');
 $fs_base = '/var/www/html/turweb';
 
 /* URL base of the site root. */
+$host_protocol = 'http';
 $host_base = 'localhost/turweb';
 
 /* This site's name (Used as the banner text) */
@@ -20,5 +21,6 @@ $site_name = 'theUpstairsRoom';
 $news_feed_id = 124;
 $max_stories = 4;
 
-$news_share_url = 'http://h4.theupstairsroom.com/horde/jonah/stories/share.php';
-$feed_base = 'http://theupstairsroom.com/rss.php';
+$horde_url = $host_protocol  . '://' . 'coffee.theupstairsroom.com/horde';
+$news_share_url = $horde_url . '/jonah/stories/share.php';
+$feed_base = 'https://theupstairsroom.com/rss.php';

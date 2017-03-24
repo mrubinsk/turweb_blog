@@ -40,6 +40,8 @@ abstract class RubinskyWeb_Controller_Base extends Horde_Controller_Base
         $view->metatags = ''; // TODO
         $view->feed = '';
         $view->host_base = $GLOBALS['host_base'];
+        $view->host_protocol = $GLOBALS['host_protocol'];
+        $view->horde_url = $GLOBALS['horde_url'];
         $this->setView($view);
     }
 

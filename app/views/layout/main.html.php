@@ -10,18 +10,18 @@
   <meta name="author" content="Michael Rubinsky">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-  <link rel="stylesheet" href="<?php echo 'https://' . $this->host_base?>/css/normalize.css">
-  <link rel="stylesheet" href="<?php echo 'https://' . $this->host_base?>/css/skeleton.css">
-  <link rel="stylesheet" href="<?php echo 'https://' . $this->host_base?>/css/custom.css">
-  <link rel="stylesheet" type="text/css" href="https://h4.theupstairsroom.com/horde/js/syntaxhighlighter/styles/shThemeEclipse.css"/>
-  <link rel="stylesheet" type="text/css" href="https://h4.theupstairsroom.com/horde/js/syntaxhighlighter/styles/shCoreEclipse.css"/>
+  <link rel="stylesheet" href="<?php echo $this->host_protocol . '://' . $this->host_base?>/css/normalize.css">
+  <link rel="stylesheet" href="<?php echo $this->host_protocol . '://' . $this->host_base?>/css/skeleton.css">
+  <link rel="stylesheet" href="<?php echo $this->host_protocol . '://' . $this->host_base?>/css/custom.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $this->horde_url ?>/js/syntaxhighlighter/styles/shThemeEclipse.css"/>
+  <link rel="stylesheet" type="text/css" href="<?php echo $this->horde_url ?>/js/syntaxhighlighter/styles/shCoreEclipse.css"/>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <script type="text/javascript" src="https://h4.theupstairsroom.com/horde/js/prototype.js"></script>
-  <script type="text/javascript" src="https://h4.theupstairsroom.com/horde/js/syntaxhighlighter/scripts/shCore.js"></script>
-  <script type="text/javascript" src="https://h4.theupstairsroom.com/horde/js/syntaxhighlighter/scripts/shAutoloader.js"></script>
+  <script type="text/javascript" src="<?php echo $this->horde_url ?>/js/prototype.js"></script>
+  <script type="text/javascript" src="<?php echo $this->horde_url ?>/js/syntaxhighlighter/scripts/shCore.js"></script>
+  <script type="text/javascript" src="<?php echo $this->horde_url ?>/js/syntaxhighlighter/scripts/shAutoloader.js"></script>
   <script type="text/javascript">
       document.observe('dom:loaded', function() {
-          var path = 'https://h4.theupstairsroom.com/horde/js/syntaxhighlighter/scripts/';
+          var path = '<?php echo $this->horde_url ?>/js/syntaxhighlighter/scripts/';
           SyntaxHighlighter.autoloader(
             'applescript ' + path + 'shBrushAppleScript.js',
             'bash shell ' + path + 'shBrushBash.js',
@@ -41,7 +41,7 @@
       function updatePreviously(page)
       {
           new Ajax.Updater('previously',
-                       '<?php echo 'https://' . $this->host_base . '/gotopage/'?>' + page);
+                       '<?php echo $this->host_protocol . '://' . $this->host_base . '/gotopage/'?>' + page);
           return false;
       }
   </script>

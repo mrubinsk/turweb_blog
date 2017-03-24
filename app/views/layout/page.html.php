@@ -10,16 +10,16 @@
   <meta name="author" content="Michael Rubinsky">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-  <link rel="stylesheet" href="<?php echo 'http://' . $this->host_base?>/css/normalize.css">
-  <link rel="stylesheet" href="<?php echo 'http://' . $this->host_base?>/css/skeleton.css">
-  <link rel="stylesheet" href="<?php echo 'http://' . $this->host_base?>/css/custom.css">
+  <link rel="stylesheet" href="<?php echo $this->host_protocol . '://' . $this->host_base?>/css/normalize.css">
+  <link rel="stylesheet" href="<?php echo $this->host_protocol . '://' . $this->host_base?>/css/skeleton.css">
+  <link rel="stylesheet" href="<?php echo $this->host_protocol . '://' . $this->host_base?>/css/custom.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
   <div id="header-wrapper">
     <div id="header" class="container">
       <div id="logo">
-        <h1><a href="http://<?php echo $this->host_base?>">theUpstairsRoom</a></h1>
+        <h1><a href="<?php echo $this->host_protocol . '://' . $this->host_base?>">theUpstairsRoom</a></h1>
         <span>News and Ramblings on Horde development</span>
       </div>
     </div>
